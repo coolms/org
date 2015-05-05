@@ -17,7 +17,6 @@ trait OrganizationableTrait
     /**
      * @var OrganizationInterface
      *
-     * @ORM\ManyToOne(targetEntity="CmsOrg\Mapping\OrganizationInterface")
      * @Form\Type("ObjectSelect")
      * @Form\Filter({"name":"StripTags"})
      * @Form\Filter({"name":"StringTrim"})
