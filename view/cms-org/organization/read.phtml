@@ -1,0 +1,59 @@
+<?php
+/**
+ * CoolMS2 Organization Module (http://www.coolms.com/)
+ *
+ * @link      http://github.com/coolms/org for the canonical source repository
+ * @copyright Copyright (c) 2006-2015 Altgraphic, ALC (http://www.altgraphic.com)
+ * @license   http://www.coolms.com/license/new-bsd New BSD License
+ * @author    Dmitry Popov <d.popov@altgraphic.com>
+ */
+
+namespace CmsOrg;
+
+?>
+<dl class="dl-horizontal">
+    <?php if ($info = $this->organization->getName()): ?>
+    <dt><?= $this->translate('Full name', 'CmsOrg'); ?></dt>
+    <dd><?= $info; ?></dd>
+    <?php endif; ?>
+
+    <?php if ($info = $this->cmsAddress($this->organization->getLegalAddress())): ?>
+    <dt><?= $this->translate('Legal address', 'CmsAddress'); ?></dt>
+    <dd><?= $info; ?></dd>
+    <?php endif; ?>
+
+    <?php if ($info = $this->cmsAddress($this->organization->getPostalAddress())): ?>
+    <dt><?= $this->translate('Postal address', 'CmsAddress'); ?></dt>
+    <dd><?= $info; ?></dd>
+    <?php endif; ?>
+
+    <?php if ($info = $this->organization->getFoundationDate()): ?>
+    <dt><?= $this->translate('Foundation date', 'CmsOrg'); ?></dt>
+    <dd><?= $this->dateFormat($info, \IntlDateFormatter::GREGORIAN, \IntlDateFormatter::NONE); ?></dd>
+    <?php endif; ?>
+
+    <?php if ($info = $this->cmsContactCollection($this->organization->getContactMetadata()->getFaxes())): ?>
+    <dt><?= $this->translate('Fax', 'CmsContact'); ?></dt>
+    <dd><?= $info; ?></dd>
+    <?php endif; ?>
+
+    <?php if ($info = $this->cmsContactCollection($this->organization->getContactMetadata()->getFixedPhones())): ?>
+    <dt><?= $this->translate('Phone', 'CmsContact'); ?></dt>
+    <dd><?= $info; ?></dd>
+    <?php endif; ?>
+
+    <?php if ($info = $this->cmsContactCollection($this->organization->getContactMetadata()->getMobilePhones())): ?>
+    <dt><?= $this->translate('Mobile phone', 'CmsContact'); ?></dt>
+    <dd><?= $info; ?></dd>
+    <?php endif; ?>
+
+    <?php if ($info = $this->cmsContactCollection($this->organization->getContactMetadata()->getEmails())): ?>
+    <dt><?= $this->translate('Email', 'CmsContact'); ?></dt>
+    <dd><?= $info; ?></dd>
+    <?php endif; ?>
+
+    <?php if ($info = $this->cmsContactCollection($this->organization->getContactMetadata()->getWebsites())): ?>
+    <dt><?= $this->translate('Website', 'CmsContact'); ?></dt>
+    <dd><?= $info; ?></dd>
+    <?php endif; ?>
+</dl>
