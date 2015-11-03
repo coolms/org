@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: CmsLegalEntity\n"
+"Project-Id-Version: CmsOrg\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: Dmitry Popov <d.popov@altgraphic.com>\n"
@@ -37,3 +37,9 @@ msgstr "Реквизиты"
 
 msgid "Foundation date"
 msgstr "Дата основания"
+
+msgid "Select legal entity"
+msgstr "Выберите юрлицо"
+
+msgid "Select position"
+msgstr "Выберите должность"

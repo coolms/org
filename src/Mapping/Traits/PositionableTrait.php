@@ -30,6 +30,7 @@ trait PositionableTrait
      *      "target_class":"CmsOrg\Mapping\PositionInterface",
      *      "property":"name",
      *      "label":"Select position",
+     *      "text_domain":"CmsOrg",
      *      "is_method":true,
      *      "find_method":{
      *          "name":"findBy",

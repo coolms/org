@@ -28,6 +28,7 @@ trait OrganizationableTrait
      *      "target_class":"CmsOrg\Mapping\OrganizationInterface",
      *      "property":"shortName",
      *      "label":"Select legal entity",
+     *      "text_domain":"CmsOrg",
      *      "is_method":true,
      *      "find_method":{
      *          "name":"findBy",
